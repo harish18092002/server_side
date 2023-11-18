@@ -27,17 +27,17 @@ async function insertData() {
 
     // Example data to insert
     const dataToInsert = {
-      name: "Harish",
-      age: 22,
-      email: "harishportfolio.in",
+      name: "Hari",
+      age: 2,
+      email: "harishportfolio.com",
     };
 
     // SQL query to insert data into the 'user' table
     const query = `
-      INSERT INTO "user" (name, age, email)
-      VALUES ($1, $2, $3)
-      RETURNING *;
-    `;
+  INSERT INTO "userdb" ("name", "age", "email")
+  VALUES ($1, $2, $3)
+  RETURNING *;
+`;
 
     // Execute the query with parameters
     const result = await client.query(query, [
